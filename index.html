@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery imgNotes - Interactive Base</title>
+		
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" media="screen">
+		<script type="text/javascript" src="libs/jquery/jquery.js"></script>
+		<script type="text/javascript" src="libs/jquery/jquery-ui.js"></script>
+		<script type="text/javascript" src="libs/jquery.fs.zoetrope.min.js"></script>
+		<script type="text/javascript" src="libs/toe.min.js"></script>
+		<script type="text/javascript" src="libs/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="libs/imgViewer.min.js"></script>
+		<script type="text/javascript" src="libs/printThis.js"></script>
+		<script type="text/javascript" src="libs/imgNotes.js"></script>
+		
+		<style type="text/css">
+		table.gridtable {
+			font-family: verdana,arial,sans-serif;
+			font-size:11px;
+			color:#333333;
+			border-width: 1px;
+			border-color: #666666;
+			border-collapse: collapse;
+		}
+		table.gridtable th {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			border-color: #666666;
+			background-color: #dedede;
+		}
+		table.gridtable td {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			border-color: #666666;
+			background-color: #ffffff;
+		}
+	</style>
+	</head>
+	<body>
+
+		<div id="imgdiv" style="text-align: center;">
+			<img id="image" src="images/MorrisvilleMap.jpg" style=""/>
+			<br/>
+			<!--<button id="toggleEdit">Edit</button>	<button id="export">Export</button> <button id="clear">Clear</button> <button id="print">Print</button>-->
+
+		</div>
+		<div id=txt></div>
+<script type="text/javascript">
+;(function($) {
+	$(document).ready(function() {
+
+		var $img = $("#image").imgNotes({	onAdd: function() {
+				this.options.vAll = "bottom";
+				this.options.hAll = "middle";
+				elem = $(document.createElement('div'))
+				       .css({width:'27px', height:'40px','text-align':'center',color:'#fff','font-weight':'bold', 'font-size':'14px'})
+				       .append($('<p>'+this.noteCount+'</p>').css({'z-index':1, position:'relative', top:'-8px'}))
+				       .prepend($('<img>',{src: 'images/marker_black.png', width:'27px', height:'40px'}).css({position:'absolute', top:'0px', left:'0px'}));
+				return elem;
+			}
+		});
+
+		
+			$img.imgNotes("addNote", 0.230729166666667, 0.205310880829016, "<b>Bicknell Hall</b>");
+		
+			$img.imgNotes("addNote", 0.2453125, 0.200129533678756, "<b>Madison Hall</b>");
+		
+			$img.imgNotes("addNote", 0.467708333333333, 0.260362694300518, "<b>Whipple Administration Building</b>");
+		
+			$img.imgNotes("addNote", 0.277083333333333, 0.167746113989637, "<b>Bailey Hall</b>");
+		
+			$img.imgNotes("addNote", 0.266666666666667, 0.194948186528497, "<b>Bailey Annex</b>");
+		
+			$img.imgNotes("addNote", 0.4796875, 0.303756476683938, "<b>Student Activities Building</b>");
+		
+			$img.imgNotes("addNote", 0.525, 0.32059585492228, "<b>Matthias Student Health Center</b>");
+		
+			$img.imgNotes("addNote", 0.223958333333333, 0.174222797927461, "<b>Brooks Hall</b>");
+		
+			$img.imgNotes("addNote", 0.427604166666667, 0.277849740932642, "<b>Butcher Library</b>");
+		
+			$img.imgNotes("addNote", 0, 0, "<b>Wood Technology Building</b>");
+		
+			$img.imgNotes("addNote", 0.445833333333333, 0.259715025906736, "<b>Crawford Hall</b>");
+		
+			$img.imgNotes("addNote", 0.506770833333333, 0.174222797927461, "<b>Fountain View Hall</b>");
+		
+			$img.imgNotes("addNote", 0.528645833333333, 0.157383419689119, "<b>Stewart Hall</b>");
+		
+			$img.imgNotes("addNote", 0.4796875, 0.188471502590674, "<b>Helyar Hall</b>");
+		
+			$img.imgNotes("addNote", 0.5625, 0.166450777202073, "<b>South Hall</b>");
+		
+			$img.imgNotes("addNote", 0.5390625, 0.191062176165803, "<b>West Hall</b>");
+		
+			$img.imgNotes("addNote", 0.428645833333333, 0.512305699481865, "<b>Sheila Johnson Design Center</b>");
+		
+			$img.imgNotes("addNote", 0.419270833333333, 0.20660621761658, "<b>Mohawk Hall</b>");
+		
+			$img.imgNotes("addNote", 0.448958333333333, 0.228626943005181, "<b>Onondaga Hall</b>");
+		
+			$img.imgNotes("addNote", 0.401041666666667, 0.280440414507772, "<b>Spader Horticulture Complex</b>");
+		
+			$img.imgNotes("addNote", 0.351041666666667, 0.220854922279793, "<b>Marshall Hall</b>");
+		
+			$img.imgNotes("addNote", 0.257291666666667, 0.235103626943005, "<b>Hamilton Hall</b>");
+		
+			$img.imgNotes("addNote", 0, 0, "<b>Johnson Service Building</b>");
+		
+			$img.imgNotes("addNote", 0.3046875, 0.172927461139896, "<b>East Hall</b>");
+		
+			$img.imgNotes("addNote", 0.3234375, 0.261010362694301, "<b>Shannon Hall</b>");
+		
+			$img.imgNotes("addNote", 0, 0, "<b>Water Treatment Plant</b>");
+		
+			$img.imgNotes("addNote", 0.378125, 0.216968911917098, "<b>Oneida Hall</b>");
+		
+			$img.imgNotes("addNote", 0.39375, 0.241580310880829, "<b>Cayuga Hall</b>");
+		
+			$img.imgNotes("addNote", 0.361458333333333, 0.257124352331606, "<b>Seneca Dining Hall</b>");
+		
+			$img.imgNotes("addNote", 0.2953125, 0.240284974093264, "<b>Charlton Hall</b>");
+		
+			$img.imgNotes("addNote", 0.323958333333333, 0.20660621761658, "<b>Galbreath Hall</b>");
+		
+			$img.imgNotes("addNote", 0.755729166666667, 0.788212435233161, "<b>Aquaculture Center</b>");
+		
+			$img.imgNotes("addNote", 0.671875, 0.375, "<b>Autobody Building</b>");
+		
+			$img.imgNotes("addNote", 0.5171875, 0.417746113989637, "<b>Recreation Center</b>");
+		
+			$img.imgNotes("addNote", 0.491666666666667, 0.469559585492228, "<b>Iceplex</b>");
+		
+			$img.imgNotes("addNote", 0, 0, "<b>Equine Breeding and Training Center</b>");
+		
+			$img.imgNotes("addNote", 0.475520833333333, 0.499352331606218, "<b>Ciarrocchi Rink</b>");
+		
+			$img.imgNotes("addNote", 0.579166666666667, 0.321891191709845, "<b>Automotive Technology Center</b>");
+		
+			$img.imgNotes("addNote", 0, 0, "<b>Dairy Complex II</b>");
+		
+			$img.imgNotes("addNote", 0.719791666666667, 0.413860103626943, "<b>Morrisville Commons I</b>");
+		
+			$img.imgNotes("addNote", 0.795833333333333, 0.461787564766839, "<b>Morrisville Commons II</b>");
+		
+			$img.imgNotes("addNote", 0.410416666666667, 0.348445595854922, "<b>Drake Field Athletic Stadium</b>");
+		
+			$img.imgNotes("addNote", 0.441666666666667, 0.562823834196891, "<b>Nelson Farm Dairy Incubator</b>");
+		
+			$img.imgNotes("addNote", 0.547916666666667, 0.65479274611399, "<b>Environmental Training Facility</b>");
+		
+			$img.imgNotes("addNote", 0.683333333333333, 0.903497409326425, "<b>Arnold R. Fisher Dairy Complex</b>");
+		
+			$img.imgNotes("addNote", 0.922916666666667, 0.704015544041451, "<b>Belgian Draft Horse Center</b>");
+		
+			$img.imgNotes("addNote", 0.2421875, 0.501943005181347, "<b>Physical Plant</b>");
+		
+			$img.imgNotes("addNote", 0.0385416666666667, 0.728626943005181, "<b>Nelson Farms</b>");
+		
+			$img.imgNotes("addNote", 0.108854166666667, 0.596502590673575, "<b>Equine Rehabilitation and Thoroughbred Training Center</b>");
+		
+			$img.imgNotes("addNote", 0.0322916666666667, 0.40479274611399, "<b>Copper Turret Restaurant</b>");
+		
+			$img.imgNotes("addNote", 0.0984375, 0.259715025906736, "<b>Western Riding and Training Center</b>");
+		
+			$img.imgNotes("addNote", 0.166666666666667, 0.262305699481865, "<b>Western Riding and Standard Breed Racing</b>");
+		
+			$img.imgNotes("addNote", 0.0328125, 0.0965025906735751, "<b>Breeding and Hunt Seat Center</b>");
+		
+			$img.imgNotes("addNote", 0.0588541666666667, 0.0796632124352332, "<b>Shelia Johnson Hunt Seat and Riding</b>");
+		
+			$img.imgNotes("addNote", 0.421875, 0.0589378238341969, "<b>Observatory</b>");
+		
+		var $toggle = $("#toggleEdit");
+		
+		if ($img.imgNotes("option","canEdit")) {
+			$toggle.text("View");
+		} else {
+			$toggle.text("Edit");
+		}
+		$toggle.on("click", function() {
+									var $this = $(this);
+									if ($this.text()=="Edit") {
+										$this.text("View");
+										$img.imgNotes("option", "canEdit", true);
+									} else {
+										$this.text('Edit');
+										$img.imgNotes('option', 'canEdit', false);
+									}
+		});
+		var $export = $("#export");
+		$export.on("click", function() {
+									var $table = $("<table/>").addClass("gridtable");
+									var notes = $img.imgNotes('export');
+									$table.append("<th>X</th><th>Y</th><th>NOTE</th>"); 
+									$.each(notes, function(index, item) {
+										$table.append("<tr><td>" + item.x + "</td><td>" + item.y + "</td><td>" + item.note + "</td></tr>");
+									});
+									$('#txt').html($table);
+		});
+		var $clear = $("#clear");
+		$clear.on("click", function() {
+									$img.imgNotes('clear');
+		});
+		var $print = $("#print");
+		$print.on("click", function() {
+									$(".viewport").printThis();
+		});
+  });
+})(jQuery);
+</script>
+</body>
+</html>
